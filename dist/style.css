@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "Blatant";
+  src: "https://www.dropbox.com/s/jg4m1pbf3i3p4c9/Blatant%20font.zip?dl=0";
+}
+* {
+  font-family: "Blatant", sans-serif;
+}
+
+body {
+  background: -webkit-linear-gradient(to bottom, #4178fa, #2b3346);
+  background: -moz-linear-gradient(to bottom, #4178fa, #2b3346);
+  background: -o-linear-gradient(to bottom, #4178fa, #2b3346);
+  background: linear-gradient(to bottom, #4178fa, #2b3346);
+  background: linear-gradient(to bottom, #4178fa, #2b3346);
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 31.25vw 16.65vw 16.65vw 16.5vw 17.5vw;
+  grid-template-rows: repeat(10, 27vh);
+}
+
+header {
+  position: relative;
+  display: inline-block;
+}
+header ul {
+  width: 100%;
+}
+header ul li {
+  display: inline-block;
+}
+header ul:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header ul:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: -2vw;
+}
+
+.Info a {
+  color: #f4f4f4;
+  font-size: 1.5vw;
+}
+
+.Info:not(:first-child) {
+  margin-top: 1.5vh;
+  margin-left: 1.5vw;
+}
+
+.iteM {
+  margin-top: 12vh;
+}
+
+.iteM:not(:first-child) {
+  margin-top: 13.5vh;
+}
+.iteM:not(:first-child) a {
+  color: #f4f4f4;
+  font-size: 22px;
+  left: -1vw;
+}
+
+.iteM:first-child a {
+  color: #4178fa;
+  font-size: 50px;
+}
+
+main div #joys {
+  position: absolute;
+  top: 35vh;
+  left: 1vw;
+}
+main div h1 {
+  grid-row: 11;
+  font-size: 40px;
+  color: #f4f4f4;
+  font-weight: lighter;
+  margin-left: 2.5vw;
+}
+main div h1:nth-child(2) {
+  grid-row: 5;
+  font-size: 40px;
+  color: #f4f4f4;
+  font-weight: lighter;
+  margin-left: 2.5vw;
+}
+main div #Caixas {
+  position: absolute;
+  top: 240vh;
+  left: 25vw;
+}
+main div #Pac {
+  position: absolute;
+  top: 200vh;
+  left: -6vw;
+}
+main div #arc {
+  position: absolute;
+  top: 400vh;
+  left: 30vw;
+}
+main div p {
+  color: #f4f4f4;
+  font-size: 20px;
+  position: absolute;
+  top: 420vh;
+  left: 2vw;
+  width: 35%;
+}
+main #BoxF {
+  position: absolute;
+  top: 175vh;
+  left: 0;
+  z-index: -1;
+}
+
+#c {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  scale: 100%;
+}
+
+#c1 {
+  position: absolute;
+  background-color: none;
+  left: 0;
+  top: 10vh;
+  width: 100%;
+  height: 100%;
+  scale: 100%;
+}
+
+#div1, #div2 {
+  width: 100%;
+  height: 100%;
+}
+
+.Aba {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.Joy {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

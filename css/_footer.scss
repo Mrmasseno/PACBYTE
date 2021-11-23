@@ -1,0 +1,51 @@
+//FOOTER
+footer {
+    display: block;
+    margin-top: 30vh;
+    position: relative;
+    width: 100%;
+    li {
+        margin-bottom: 10px;
+    }
+
+    .left {
+        display: block;
+
+        .inquerito {
+            margin-top: 2%;
+            padding-left: 40px;
+            input {
+                font-family: "Blatant", sans-serif;
+                color: $White;
+                background-color: transparent;
+            }
+            input[type="email"] {
+                text-decoration: none;
+                width: 170px;
+                border: none;
+                border-bottom: 4px solid $White;
+            }
+
+            input[type="submit"] {
+                text-decoration: none;
+                border: none;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .socials {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 84%;
+        bottom: 0;
+
+        img {
+            width: 16%;
+            height: auto;
+        }
+    }
+}

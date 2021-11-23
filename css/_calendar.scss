@@ -1,0 +1,90 @@
+@mixin align() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calendar-container {
+    @include align;
+    height: 25vw;
+    width: auto;
+    .calendar {
+        width: 50%;
+        height: 100%;
+        background-image: url(/imgs/Calendário.png);
+        background-position: center;
+        background-size: cover;
+        .calendar-left {
+            width: 50%;
+            margin-left: -1%;
+            .monthyear {
+                @include align;
+                padding-top: 3.2vw;
+                margin-bottom: 0;
+                img {
+                    width: 1vw;
+                }
+                #larrow {
+                    margin-right: 0.5vw;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                #rarrow {
+                    margin-left: 1vw;
+                    margin-right: -1vw;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                div {
+                    font-size: 1.5vw;
+                    text-transform: uppercase;
+                    color: $darktext;
+                    width: 15vw;
+                    @include align;
+                }
+            }
+            .week {
+                width: 100%;
+                margin: 0;
+                padding: 1.3vw 0 0.9vw 0.2vw;
+                @include align;
+                li {
+                    font-size: 1vw;
+                    color: $darktext;
+                    margin-right: 1.2vw;
+                    width: 1.3vw;
+                    height: 1.3vw;
+                    text-align: center;
+                }
+                li:last-child {
+                    margin-right: 0;
+                }
+            }
+            .day {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 0.02vw;
+                margin-left: 0.65vw;
+                padding: 0 3.25vw;
+                li {
+                    @include align;
+                    font-size: 0.8vw;
+                    color: $darktext;
+                    width: 1.3vw;
+                    height: 1.3vw;
+                    margin: 0 0.6vw 1.2vw 0.6vw;
+                    text-align: center;
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.151);
+                        cursor: pointer;
+                    }
+                }
+                #today {
+                    background-color: $darktext;
+                    color: $White;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,680 @@
+@import "./variaveis";
+
+@mixin gradient($direction, $color) {
+    //função gradiente
+    background: -webkit-linear-gradient($direction, $color);
+    background: -moz-linear-gradient($direction, $color);
+    background: -o-linear-gradient($direction, $color);
+    background: linear-gradient($direction, $color);
+    background: linear-gradient($direction, $color);
+}
+@import "./calendar";
+
+@font-face {
+    font-family: 'Blatant';
+    src: "https://www.dropbox.com/s/jg4m1pbf3i3p4c9/Blatant%20font.zip?dl=0"
+}
+
+* {
+    font-family: 'Blatant', sans-serif, ;
+}
+
+body {
+    @include gradient(to bottom, $grColor);
+    margin: 0;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+ul {
+    list-style: none;
+    color: $White;
+}
+
+a {
+    text-decoration: none;
+    color: $White;
+}
+
+h1 {
+    font-size: 2.6em;
+}
+
+//Grid
+
+.grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 31.25vw 16.65vw 16.65vw 16.5vw 17.5vw;
+    grid-template-rows: repeat(10, 27vh);
+}
+
+@import "./header";
+
+//Body - NEXT EVENTS
+
+main {
+    div {
+        #joys {
+            position: absolute;
+            top: 35vh;
+            left: 1vw;
+        }
+
+        h1 {
+            grid-row: 11;
+            font-size: 40px;
+            color: $White;
+            font-weight: lighter;
+            margin-left: 2.5vw;
+
+        }
+
+        h1:nth-child(2) {
+            grid-row: 5;
+            font-size: 40px;
+            color: $White;
+            font-weight: lighter;
+            margin-left: 2.5vw;
+
+        }
+
+        #Caixas {
+            position: absolute;
+            top: 240vh;
+            left: 25vw;
+        }
+
+        #Pac {
+            position: absolute;
+            top: 200vh;
+            left: -6vw;
+        }
+
+        #arc {
+            position: absolute;
+            top: 400vh;
+            left: 30vw;
+        }
+
+        p {
+            color: $White;
+            font-size: 20px;
+            position: absolute;
+            top: 420vh;
+            left: 2vw;
+            width: 35%;
+        }
+    }
+
+    #BoxF {
+        position: absolute;
+        top: 175vh;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.smallertext {
+    font-size: 14px;
+}
+
+
+
+
+@import "./footer";
+
+
+//NEWS
+#news {
+    margin-left: 3%;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    padding: 10px;
+    width: 60%;
+}
+
+.grid-container1>div {
+    text-align: center;
+}
+
+// Lista de artigos
+#imglist>img {
+    float: right;
+    vertical-align: middle;
+    width: 50%;
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+#imglist>img:first-of-type {
+    display: block;
+}
+
+
+
+#artlist {
+    float: left;
+    vertical-align: middle;
+
+    li {
+        margin: 13% 0px;
+    }
+}
+
+
+
+// Lista de artigos
+#imglist>img {
+    width: 250px;
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+#imglist>img:first-of-type {
+    display: block;
+}
+
+.controlos {
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center
+}
+
+
+//ANNOUNCMENTS
+#announ {
+    width: 70%;
+    height: 80vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    grid-auto-columns: 30%;
+}
+
+
+.grid-item2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 150%;
+}
+
+.grid-item4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 150%;
+}
+
+.grid-item3 {
+    display: block;
+
+}
+
+.userinfo {
+    position: relative;
+    top: 52%;
+    transform: translate(0, -50%);
+    left: 20%;
+    width: 45%;
+    display: inline-block;
+    margin: 0;
+
+    span {
+        position: relative;
+        margin-top: 1px;
+        display: block;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.forumform {
+    display: inline-block;
+    width: 100%;
+    margin-top: 6%;
+    padding-left: 10%;
+    margin-left: -50%;
+
+    textarea {
+        width: 99%;
+        height: 13vh;
+        background-color: $White;
+        font-family: 'Blatant', sans-serif;
+    }
+
+    input[type="submit"] {
+        font-family: 'Blatant', sans-serif;
+        color: $White;
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        position: relative;
+        display: block;
+        left: 100%;
+        transform: translate(-100%);
+    }
+
+    #forumposts {
+        display: inline-block;
+        width: 100%;
+        height: 13vh;
+        background-color: $White;
+        font-family: 'Blatant', sans-serif;
+        color: black;
+
+        span {
+            display: block;
+            padding: 20px;
+        }
+    }
+}
+
+.slideshow {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+}
+
+// TELEVISÕES
+#tvscreen {
+    position: relative;
+}
+
+#tvscreen>img {
+    position: relative;
+    left: 50%;
+    transform: translate(-52.5%);
+    width: 50%;
+    height: auto;
+}
+
+//fazer com que so apareça uma categoria de cada vez
+#tvscreen>li {
+    display: none;
+}
+
+#tvscreen>li:first-of-type {
+    display: block;
+
+    img {
+        display: block;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-48%);
+        width: 24%;
+        height: auto;
+    }
+
+    span {
+        display: inline-block;
+        position: absolute;
+        color: $BackBl1;
+        text-align: center;
+        top: 84%;
+        left: 50%;
+        transform: translate(-50%);
+
+        a {
+            color: $BackBl1;
+        }
+
+    }
+}
+
+// JOYSTICK
+.joystickctrl {
+    margin-top: 5%;
+    width: 100%;
+    position: relative;
+    display: block;
+
+    div {
+        width: 22.8%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+
+        img {
+            display: inline-block;
+            margin: -20%;
+            width: 16vw;
+            height: auto;
+        }
+    }
+}
+
+.joystickctrl>img {
+    width: 10vw;
+    position: absolute;
+    top: -1vw;
+    left: 50%;
+    transform: translate(-53.5%);
+
+}
+
+// TLMV 
+@media (max-width:576px) {
+
+    //footer
+    footer {
+        margin-top: 5%;
+    }
+
+    .socials {
+        display: inline-block;
+        position: relative;
+        left: 0;
+        margin-left: 39px;
+        margin-top: 10px;
+
+        img {
+            width: 13%;
+            height: auto;
+        }
+    }
+
+    //tv
+    // TELEVISÕES
+
+    #tvscreen>img {
+        left: 46%;
+        width: 100%;
+    }
+
+    //fazer com que so apareça uma categoria de cada vez
+    #tvscreen>li {
+        display: none;
+    }
+
+    #tvscreen>li:first-of-type {
+        display: block;
+
+        img {
+
+            top: 30%;
+            left: 50%;
+            transform: translate(-47%);
+            width: 50%;
+            height: auto;
+        }
+
+        span {
+            display: inline-block;
+            position: absolute;
+            color: $BackBl1;
+            text-align:center;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%);
+
+            a {
+                color: $BackBl1;
+            }
+        }
+    }
+
+
+    // JOYSTICK
+    .joystickctrl {
+        margin-top: 10%;
+        width: 90%;
+        position: relative;
+        display: block;
+
+        div {
+            width: 95%;
+            height: 30vh;
+            position: relative;
+            left: 65%;
+
+            img {
+                display: inline-block;
+                margin: -15%;
+                width: 45vw;
+                height: auto;
+            }
+        }
+    }
+
+    .joystickctrl>img {
+        width: 25vw;
+        position: absolute;
+        top: -1vw;
+        left: 50%;
+        transform: translate(-35%);
+    }
+
+
+    //NEWS
+    #news {
+        margin-left: 3%;
+    }
+
+    .grid-container1 {
+        display: block;
+        width: 80%;
+    }
+
+    .grid-container1>div {
+        text-align: center;
+    }
+
+    .grid-item01 {
+        text-align: center;
+    }
+
+    // Lista de artigos
+    #imglist>img {
+        float: right;
+        vertical-align: middle;
+        width: 50%;
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #imglist>img:first-of-type {
+        display: block;
+    }
+
+
+
+    #artlist {
+        float: left;
+        vertical-align: middle;
+
+        li {
+            margin: 13% 0px;
+        }
+    }
+
+    // Lista de artigos
+    #imglist>img {
+        width: 250px;
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #imglist>img:first-of-type {
+        display: block;
+    }
+
+    .controlos {
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        justify-content: center
+    }
+
+    .controlos>img {
+        width: 100%;
+    }
+
+    .slideshow {
+        position: absolute;
+        top: 60%;
+        left: 0;
+        text-align: center;
+    }
+
+    #announ {
+        width: 70%;
+        height: 80vh;
+    }
+
+    .grid-container {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+
+    .grid-item2 {
+        width: 100%;
+    }
+
+    .grid-item4 {
+
+        width: 100%;
+    }
+
+    .grid-item3 {
+        display: block;
+
+    }
+
+    .userinfo {
+        position: absolute;
+        top: 0;
+        transform: translate(0, 0);
+        left: 0;
+        width: 45%;
+        height: auto;
+
+        span {
+            position: relative;
+            top: 39vh;
+            left: 160%;
+            margin-top: 1px;
+            display: block;
+            font-size: 0.6em;
+            text-align: center;
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    .forumform {
+        display: inline-block;
+        width: 100%;
+        margin-top: 6%;
+        padding-left: 10%;
+        margin-left: 0;
+
+        textarea {
+            width: 99%;
+            height: 13vh;
+            background-color: $White;
+            font-family: 'Blatant', sans-serif;
+        }
+
+        input[type="submit"] {
+            font-family: 'Blatant', sans-serif;
+            color: $White;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            position: relative;
+            display: block;
+            left: 100%;
+            transform: translate(-100%);
+        }
+
+        #forumposts {
+            display: inline-block;
+            width: 100%;
+            height: 13vh;
+            background-color: $White;
+            font-family: 'Blatant', sans-serif;
+            color: black;
+
+            span {
+                display: block;
+                padding: 20px;
+            }
+        }
+    }
+}
+
+//Modelos 3D css
+
+#c {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    scale: 100%;
+}
+
+#c1 {
+    position: absolute;
+    background-color: none;
+    left: 0;
+    top: 10vh;
+    width: 100%;
+    height: 100%;
+    scale: 100%;
+}
+
+#div1,
+#div2 {
+    width: 100%;
+    height: 100%;
+}
+
+.Aba {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.Joy {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}

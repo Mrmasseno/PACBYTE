@@ -1,0 +1,75 @@
+//Header
+header {
+    position: relative;
+    display: inline-block;
+
+    ul {
+        width: 100%;
+
+        li {
+            display: inline-block;
+        }
+    }
+
+    ul:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    ul:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: -2vw;
+    }
+}
+
+.Info {
+    a {
+        color: $White;
+        font-size: 1.5vw;
+    }
+}
+
+.Info:not(:first-child) {
+    margin-top: 1.5vh;
+    margin-left: 1.5vw;
+}
+
+.iteM {
+    margin-top: 12vh;
+}
+
+.iteM:not(:first-child) {
+    margin-top: 13.5vh;
+
+    a {
+        color: $White;
+        font-size: 22px;
+        left: -1vw;
+    }
+}
+
+.iteM:first-child {
+    a {
+        color: $BackBl1;
+        font-size: 50px;
+    }
+}
+
+.iteM:nth-child(2){
+margin-left: 14.8vw;
+}
+
+
+.iteM:nth-child(3){
+margin-left: 9vw;
+}
+
+.iteM:nth-child(4){
+margin-left: 10.1vw;
+}
+
+.iteM:nth-child(5){
+margin-left: 10vw;
+}
